@@ -15,7 +15,7 @@ const { title, description } = Astro.props
 		<meta name='viewport' content='width=device-width, initial-scale=1' />
 		<meta
 			name='keywords'
-			content='boxode, boxode.org, boxode open source software, boxode oss, boxode open source, boxode software, software, software development, software development company, software development services, software development company in mexico, web development, web development company, uiux development, uiux development company, uiux development company in mexico, uiux development services, uiux development services in mexico'
+			content='duneiu, tailwindcss, duneui.com, components, templates, open-source, tailwindcss-components, tailwindcss-templates'
 		/>
 		<link rel='shortcut icon' href='/favicon/favicon.ico' type='image/x-icon' />
 		<meta name='description' content={description} />
@@ -44,29 +44,29 @@ const { title, description } = Astro.props
 		/>
 		<meta name='msapplication-TileColor' content='#ffffff' />
 		<meta name='theme-color' content='#ffffff' />
-		<link rel='canonical' href='https://windui.org/' />
-		<meta name='apple-mobile-web-app-title' content='windUI' />
-		<meta name='application-name' content='windUI' />
-		<meta property='og:url' content='https://windUI.org/' />
+		<link rel='canonical' href='https://duneui.com/' />
+		<meta name='apple-mobile-web-app-title' content='DuneUI' />
+		<meta name='application-name' content='DuneUI' />
+		<meta property='og:url' content='https://duneui.com/' />
 		<meta property='og:type' content='website' />
-		<meta property='og:title' content='windUI' />
+		<meta property='og:title' content='DuneUI' />
 		<meta
 			property='og:image'
-			content='https://res.cloudinary.com/dvjzjasfg/image/upload/v1694909149/windUI_v1.0_qu7myh.png'
+			content='https://res.cloudinary.com/dvjzjasfg/image/upload/v1694909149/DuneUI_v1.0_qu7myh.png'
 		/>
 		<meta property='og:description' content={description} />
 		<meta property='og:locate' content='es_MX' />
-		<meta property='og:site_name' content='windUI' />
+		<meta property='og:site_name' content='DuneUI' />
 		<meta name='twitter:card' content='summary_large_image' />
-		<meta name='twitter:site' content='@BoxodeHQ' />
-		<meta name='twitter:title' content='windUI' />
+		<meta name='twitter:site' content='@FabianHermar' />
+		<meta name='twitter:title' content='DuneUI' />
 		<meta
 			name='twitter:description'
 			content='An open-source library of components and templates made with TailwindCSS.'
 		/>
 		<meta
 			name='twitter:image'
-			content='https://res.cloudinary.com/dvjzjasfg/image/upload/v1694909149/windUI_v1.0_qu7myh.png'
+			content='https://res.cloudinary.com/dvjzjasfg/image/upload/v1694909149/DuneUI_v1.0_qu7myh.png'
 		/>
 		<title>{title}</title>
 	</head>
@@ -74,31 +74,3 @@ const { title, description } = Astro.props
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
