@@ -1,0 +1,121 @@
+---
+import Button from '@/components/ui/Button.astro'
+import Pill from '../ui/Pill.astro'
+import GridPatternLinearGradient from '@/components/Background'
+import { Particles } from '@/components/Particles'
+---
+
+<GridPatternLinearGradient>
+	<section class='overflow-hidden relative h-max'>
+		<div class='w-full pt-32 md:pt-32 lg:pt-48 px-4 md:px-6'>
+			<div
+				class='container mx-auto flex flex-col items-center space-y-4 text-center'
+			>
+				<Pill text='🛠 Beta version of DuneUI' href='' />
+				<h1
+					class='text-4xl font-bold lg:h-40 font-GilroyBold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none max-w-3xl mx-auto bg-clip-text text-transparent bg-gradient-to-r from-[#93603e] via-[#c18156] to-[#cea472]'
+				>
+					Make your websites looks stunning
+				</h1>
+				<p
+					class='mx-auto max-w-[700px] font-normal font-GilroyRegular text-gray-600 md:text-xl dark:text-gray-300 mb-8'
+				>
+					Create stunning user interfaces in minutes with our free collection of
+					high-quality Tailwind CSS components.
+				</p>
+				<div class='flex flex-col sm:flex-row gap-4'>
+					<Button
+						href='#'
+						target='_blank'
+						ariaLabel='Browse all components'
+						text='Browse all components'
+						additionalClasses='bg-[#93603e] hover:bg-[#c18156] transition-colors duration-100 select-none'
+					/>
+					<a
+						href='#'
+						class='inline-flex items-center font-semibold font-GilroySemibold justify-center rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-gray-300 hover:bg-gray-100 h-11 px-8'
+					>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='2'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							class='mr-2 h-4 w-4'
+							><path
+								d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'
+							></path></svg
+						>
+						Support the project
+					</a>
+				</div>
+				<div
+					class='flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 mt-8'
+				>
+					<div class='flex items-center space-x-2'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='2'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							class='text-[#93603e]'
+							><polyline points='20 6 9 17 4 12'></polyline></svg
+						>
+						<span
+							class='text-sm text-gray-600 dark:text-gray-300 font-normal font-GilroyRegular'
+							>100% free</span
+						>
+					</div>
+					<div class='flex items-center space-x-2'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='2'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							class='text-[#93603e]'
+							><polyline points='20 6 9 17 4 12'></polyline></svg
+						>
+						<span
+							class='text-sm text-gray-600 dark:text-gray-300 font-normal font-GilroyRegular'
+							>Open source</span
+						>
+					</div>
+					<div class='flex items-center space-x-2'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='2'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							class='text-[#93603e]'
+							><polyline points='20 6 9 17 4 12'></polyline></svg
+						>
+						<span
+							class='text-sm text-gray-600 dark:text-gray-300 font-normal font-GilroyRegular'
+							>Regular updates</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<Particles client:visible />
+</GridPatternLinearGradient>
