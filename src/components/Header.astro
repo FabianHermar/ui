@@ -1,0 +1,153 @@
+---
+import Container from './Container.astro'
+---
+
+<script>
+	let isToggled = false
+	const navlinks = document.querySelector('#navlinks')
+	const hamburger = document.querySelector('#hamburger')
+	const layer = document.querySelector('#navLayer')
+	const links = [...navlinks.querySelector('ul').children]
+
+	function toggleNavlinks() {
+		if (isToggled) {
+			navlinks.classList.add(
+				'!visible',
+				'!scale-100',
+				'!opacity-100',
+				'!lg:translate-y-0'
+			)
+			hamburger.classList.add('toggled')
+			// layer.classList.add("origin-top", "scale-y-100", "backdrop-blur-lg");
+		} else {
+			navlinks.classList.remove(
+				'!visible',
+				'!scale-100',
+				'!opacity-100',
+				'!lg:translate-y-0'
+			)
+			hamburger.classList.remove('toggled')
+			// layer.classList.remove("origin-top", "scale-y-100", "backdrop-blur-lg");
+		}
+	}
+	hamburger.addEventListener('click', () => {
+		isToggled = !isToggled
+		toggleNavlinks()
+	})
+
+	links.forEach((link) => {
+		link.addEventListener('click', () => {
+			isToggled = !isToggled
+			toggleNavlinks()
+		})
+	})
+</script>
+
+<header>
+	<nav
+		class='fixed z-20 w-full select-none border-b border-black/5 bg-white/[0.01] pt-0 backdrop-blur-lg dark:border-white/5 lg:border-transparent'
+	>
+		<Container>
+			<div
+				class='flex w-full flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4'
+			>
+				<div class='z-20 flex w-full justify-between md:px-0'>
+					<a
+						href=''
+						aria-label='logo'
+						class='fill-current flex w-full items-center justify-start space-x-2 text-black dark:text-white'
+					>
+						<img src='/svg/DuneUI.svg' alt='logo' class='size-12' />
+						<span class='font-GilroyBold text-2xl'
+							>Dune<span class='text-[#93603e]'>UI</span></span
+						>
+					</a>
+
+					<div
+						class='relative flex max-h-10 w-full items-center justify-end pr-4 lg:hidden'
+					>
+						<button
+							aria-label='humburger'
+							id='hamburger'
+							class='relative -mr-6 mt-4 flex flex-col justify-center p-6'
+						>
+							<div
+								aria-hidden='true'
+								id='line'
+								class='m-auto h-0.5 w-5 rounded-md bg-black transition duration-300 dark:bg-white'
+							>
+							</div>
+							<div
+								aria-hidden='true'
+								id='line2'
+								class='m-auto mt-2 h-0.5 w-5 rounded-lg bg-black transition duration-300 dark:bg-white'
+							>
+							</div>
+						</button>
+					</div>
+					<!-- <div id="navLayer" aria-hidden="true" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 backdrop-blur-lg transition duration-500 dark:bg-gray-100/10 lg:hidden"></div> -->
+					<div
+						id='navlinks'
+						class='invisible absolute left-0 top-full z-20 h-56 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl bg-neutral-300 p-8 opacity-0 shadow-2xl transition-all duration-300 dark:bg-neutral-700 dark:shadow-none dark:md:bg-transparent lg:visible lg:relative lg:flex lg:h-auto lg:w-full lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none'
+					>
+						<div class='text-gray-600 w-full lg:w-max lg:pr-4 lg:pt-0'>
+							<ul
+								class='flex flex-col items-center justify-end gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-base'
+							>
+								<li>
+									<a
+										href='#experience'
+										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									>
+										<span>Components</span>
+									</a>
+								</li>
+								<li>
+									<a
+										href='#projects'
+										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									>
+										<span>Templates</span>
+									</a>
+								</li>
+								<li>
+									<a
+										href='#about-me'
+										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									>
+										<span>Showcases</span>
+									</a>
+								</li>
+								<li>
+									<a
+										href='#contact'
+										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
+									>
+										<span>What's new</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</nav>
+
+	<style>
+		#toggle_nav:checked ~ div #hamburger #line {
+			@apply translate-y-1.5 rotate-45;
+		}
+
+		#toggle_nav:checked ~ div #hamburger #line2 {
+			@apply -translate-y-1 -rotate-45;
+		}
+
+		.toggled div:first-child {
+			@apply translate-y-1.5 rotate-45;
+		}
+		.toggled div:last-child {
+			@apply -translate-y-1 -rotate-45;
+		}
+	</style>
+</header>
