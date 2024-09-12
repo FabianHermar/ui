@@ -12,6 +12,11 @@ module.exports = {
       },
     },
     extend: {
+			fontFamily: {
+        GilroyRegular: [ 'GilroyRegular', 'system-ui', 'sans-serif' ],
+        GilroyBold: [ 'GilroyBold', 'system-ui', 'sans-serif' ],
+        GilroySemibold: [ 'GilroySemibold', 'system-ui', 'sans-serif' ]
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
