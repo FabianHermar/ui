@@ -1,54 +1,44 @@
-# Astro Starter Kit: Basics
+# DuneUI
 
-```sh
-npm create astro@latest -- --template basics
+**DuneUI** is a UI component library built on **TailwindCSS**, designed to simplify the creation of modern and accessible web interfaces. No need to install additional packages—just copy and paste the component code, and use the power of TailwindCSS to customize everything to your needs.
+
+## Features
+
+- **TailwindCSS-based**: All components are styled using TailwindCSS utilities, allowing you to easily tweak and adjust styles.
+- **Production-ready components**: Copy and paste components directly into your project with no extra dependencies.
+- **Accessibility**: Components are designed following best accessibility practices.
+- **Framework-agnostic**: Works in any project that uses TailwindCSS, with no additional JavaScript required.
+
+## Getting Started
+
+1. Ensure that **TailwindCSS** is set up in your project. If not, follow [this installation guide](https://tailwindcss.com/docs/installation).
+2. Browse the [DuneUI documentation](https://duneui.com/docs) to find the component you need.
+3. Copy the component’s code.
+4. Paste it into your project and adjust the TailwindCSS classes as needed.
+
+### Example
+
+```html
+<!-- DuneUI Button Component -->
+<button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+  Click me
+</button>
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Documentation
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Check out the full [DuneUI documentation](https://duneui.com/docs) to explore all available components and learn how to customize them using TailwindCSS.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Contributing
 
-## 🚀 Project Structure
+Contributions are welcome! If you’d like to contribute or add new components, follow these steps:
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b my-new-feature`.
+3. Commit your changes: `git commit -m 'Add new feature'`.
+4. Push to the branch: `git push origin my-new-feature`.
+5. Open a Pull Request for review.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## License
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is licensed under the [MIT License](LICENSE).
