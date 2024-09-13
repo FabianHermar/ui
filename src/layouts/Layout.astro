@@ -70,6 +70,20 @@ const { title, description } = Astro.props
 			content='https://res.cloudinary.com/dvjzjasfg/image/upload/v1694909149/DuneUI_v1.0_qu7myh.png'
 		/>
 		<title>{title}</title>
+		<script is:inline type='text/javascript'>
+			;(function (c, l, a, r, i, t, y) {
+				c[a] =
+					c[a] ||
+					function () {
+						;(c[a].q = c[a].q || []).push(arguments)
+					}
+				t = l.createElement(r)
+				t.async = 1
+				t.src = 'https://www.clarity.ms/tag/' + i
+				y = l.getElementsByTagName(r)[0]
+				y.parentNode.insertBefore(t, y)
+			})(window, document, 'clarity', 'script', 'o2gfoxgfkv')
+		</script>
 		<ViewTransitions />
 	</head>
 	<body>
