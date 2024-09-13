@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem } from '@nextui-org/react'
-import { FAQS } from '@/lib/FAQ'
+import { FAQS } from '@/constants/FAQ'
 
 export default function FAQ() {
 	const defaultContent =
