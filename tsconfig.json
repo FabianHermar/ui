@@ -4,11 +4,12 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/layouts/*": ["./src/layouts/*"],
-      "@/lib/*": ["./src/lib/*"]
-    },
+			"@/*": ["./src/*"],
+			"@/components/*": ["./src/components/*"],
+			"@/layouts/*": ["./src/layouts/*"],
+			"@/lib/*": ["./src/lib/*"],
+			"@/modules/*": ["./src/modules/*"]
+		},
     "baseUrl": "./"
   }
 }
