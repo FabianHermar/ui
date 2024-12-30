@@ -1,6 +1,6 @@
 ---
 import '@/styles/globals.css'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 interface Props {
 	title: string
 	description: string
@@ -84,7 +84,7 @@ const { title, description } = Astro.props
 				y.parentNode.insertBefore(t, y)
 			})(window, document, 'clarity', 'script', 'o2gfoxgfkv')
 		</script>
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body>
 		<slot />
