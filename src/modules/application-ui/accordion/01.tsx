@@ -4,7 +4,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { CopyIcon, CheckIcon } from '../landing/Icons'
 
-export default function Accordion1() {
+export default function Accordion1 () {
 	const copyCode = `<!doctype html>
 <html lang="en">
 	<head>
