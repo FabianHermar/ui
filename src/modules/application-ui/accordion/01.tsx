@@ -1,70 +1,113 @@
-import { useState } from 'react'
+'use client'
 
+import { useState } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import { CopyIcon, CheckIcon } from '../landing/Icons'
+import CheckIcon from '@/components/Icons/CheckIcon'
+import CopyIcon from '@/components/Icons/CopyIcon'
 
-export default function Accordion1 () {
-	const copyCode = `<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + React</title>
-	</head>
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.jsx"></script>
-	</body>
-</html>
-	`
+export default function CustomTabsHeader() {
+	const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview')
 	const [copy, setCopy] = useState(false)
+
+	const exampleCode = `<div className="flex min-h-screen items-center justify-center">
+  <h1 className="text-3xl font-bold">
+    Simple Centered Component
+  </h1>
+</div>
+`
+
+	const handleCopy = () => {
+		navigator.clipboard.writeText(exampleCode)
+		setCopy(true)
+		setTimeout(() => {
+			setCopy(false)
+		}, 3000)
+	}
+
 	return (
-		<div className='bg-gray-500 grid place-items-center h-screen'>
-			<div className='max-w-6xl min-w-[25rem] bg-[#3A404D] rounded-md'>
-				<div className='flex justify-between px-4 py-1 text-white text-xs items-center z-20'>
-					<p className='text-sm'>Example Code</p>
-					{copy ? (
+		<div className='min-h-screen p-6'>
+			<div className='w-full max-w-6xl mx-auto'>
+				{/* Header Navigation */}
+				<div className="flex items-center justify-between border-b border-gray-200 pb-4">
+					<div className="flex items-center gap-3">
+						<h1 className="text-xl font-semibold text-gray-900">Simple centered</h1>
+						<span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+							Requires JS
+						</span>
+					</div>
+
+					<div className="flex items-center gap-3">
+						<div className="inline-flex rounded-lg shadow-sm">
+							<button
+								onClick={() => setActiveTab('preview')}
+								className={`relative inline-flex items-center px-4 py-2 text-sm font-medium rounded-l-lg
+                  ${activeTab === 'preview'
+										? 'bg-white text-gray-900 ring-1 ring-inset ring-gray-300'
+										: 'bg-gray-50 text-gray-600 hover:bg-gray-100'
+									}`}
+							>
+								<svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+									<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+									<circle cx="12" cy="12" r="3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+								</svg>
+								Preview
+							</button>
+							<button
+								onClick={() => setActiveTab('code')}
+								className={`relative -ml-px inline-flex items-center px-4 py-2 text-sm font-medium rounded-r-lg
+                  ${activeTab === 'code'
+										? 'bg-white text-gray-900 ring-1 ring-inset ring-gray-300'
+										: 'bg-gray-50 text-gray-600 hover:bg-gray-100'
+									}`}
+							>
+								<div className='border-l-2 border-gray-300' />
+								<svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+									<path d="m8 6-6 6 6 6M16 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+								</svg>
+								Code
+							</button>
+						</div>
+
 						<button
-							className='py-1 inline-flex items-center gap-1'
-							onClick={() => {
-								console.log('copy')
-							}}
+							onClick={handleCopy}
+							className="inline-flex items-center gap-1 rounded-lg bg-gray-50 px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100"
 						>
-							<span className='text-base mt-1 inline-flex items-center'>
-								<CheckIcon />
-							</span>
-							Copied!
+							{copy ? (
+								<>
+									<CheckIcon />
+									<span>Copied!</span>
+								</>
+							) : (
+								<>
+									<CopyIcon />
+									<span>Copy</span>
+								</>
+							)}
 						</button>
+					</div>
+				</div>
+
+				{/* Content */}
+				<div className='bg-white rounded-lg mt-4 border border-gray-200'>
+					{activeTab === 'preview' ? (
+						<div className="flex min-h-[400px] items-center justify-center p-4">
+							<h1 className="text-3xl font-bold">
+								Simple Centered Component
+							</h1>
+						</div>
 					) : (
-						<button
-							className='py-1 inline-flex items-center gap-1'
-							onClick={() => {
-								console.log('copy')
-								navigator.clipboard.writeText(copyCode)
-								setCopy(true)
-								setTimeout(() => {
-									setCopy(false)
-								}, 3000)
-							}}
-						>
-							<span className='text-base mt-1 inline-flex items-center'>
-								<CopyIcon />
-							</span>
-							Copy
-						</button>
+							<SyntaxHighlighter
+								language='javascript'
+								style={nightOwl}
+								customStyle={{ padding: '20px', borderRadius: '0.5rem', fontSize: '14px', scrollbarWidth: 'thin', scrollbarColor: '#fff #011627' }}
+							>
+								{exampleCode}
+							</SyntaxHighlighter>
 					)}
 				</div>
-				<SyntaxHighlighter
-					language='html'
-					style={nightOwl}
-					customStyle={{ padding: '20px' }}
-					// wrapLongLines={true}
-				>
-					{copyCode}
-				</SyntaxHighlighter>
 			</div>
 		</div>
 	)
 }
+
