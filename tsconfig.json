@@ -8,7 +8,10 @@
 			"@/components/*": ["./src/components/*"],
 			"@/layouts/*": ["./src/layouts/*"],
 			"@/lib/*": ["./src/lib/*"],
-			"@/modules/*": ["./src/modules/*"]
+			"@/core/*": ["./src/modules/core/*"],
+			"@/AUI/*": ["./src/modules/application-ui/*"],
+			"@/ecommerce/*": ["./src/modules/ecommerce/*"],
+			"@/marketing/*": ["./src/modules/marketing/*"]
 		},
     "baseUrl": "./"
   }
