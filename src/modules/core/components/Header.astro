@@ -57,7 +57,13 @@ import Container from './Container.astro'
 						aria-label='logo'
 						class='fill-current flex w-full items-center justify-start space-x-2 text-black dark:text-white'
 					>
-						<img src='/svg/DuneUI.svg' alt='logo' class='size-12' />
+						<img
+							src='/svg/DuneUI.svg'
+							alt='logo'
+							class='size-12'
+							loading='lazy'
+							decoding='async'
+						/>
 						<span class='font-GilroyBold text-2xl font-bold'
 							>Dune<span class='text-[#93603e]'>UI</span></span
 						>
@@ -96,7 +102,7 @@ import Container from './Container.astro'
 							>
 								<li>
 									<a
-										href='#experience'
+										href='/components'
 										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 									>
 										<span>Components</span>
@@ -104,7 +110,7 @@ import Container from './Container.astro'
 								</li>
 								<li>
 									<a
-										href='#projects'
+										href='/templates'
 										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 									>
 										<span>Templates</span>
@@ -112,7 +118,7 @@ import Container from './Container.astro'
 								</li>
 								<li>
 									<a
-										href='#about-me'
+										href='/showcases'
 										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 									>
 										<span>Showcases</span>
@@ -120,7 +126,7 @@ import Container from './Container.astro'
 								</li>
 								<li>
 									<a
-										href='#contact'
+										href='/blog'
 										class='block font-GilroySemibold text-base text-black transition-colors hover:text-neutral-300 dark:text-white md:px-4'
 									>
 										<span>What's new</span>
