@@ -62,7 +62,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center justify-center gap-2">
-        <img width="50" height="50" alt={name} src={img} />
+				<img width="50" height="50" alt={name} src={img} loading="lazy" decoding="async" />
       </div>
     </figure>
   );
@@ -71,7 +71,7 @@ const ReviewCard = ({
 export function MarqueeDemo() {
   return (
     <div className="relative flex h-96 w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-      <Marquee pauseOnHover className="[--duration:20s]">
+			<Marquee className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.name} {...review} />
         ))}
