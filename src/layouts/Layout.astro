@@ -1,6 +1,9 @@
 ---
 import '@/styles/globals.css'
 import { ClientRouter } from 'astro:transitions'
+import Header from '@/core/components/Header.astro'
+import Footer from '@/core/components/Footer.astro'
+
 interface Props {
 	title: string
 	description: string
@@ -12,6 +15,7 @@ const { title, description } = Astro.props
 <!doctype html>
 <html lang='en'>
 	<head>
+		<title>{title}</title>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1' />
 		<meta
@@ -69,7 +73,6 @@ const { title, description } = Astro.props
 			name='twitter:image'
 			content='https://res.cloudinary.com/dvjzjasfg/image/upload/v1694909149/DuneUI_v1.0_qu7myh.png'
 		/>
-		<title>{title}</title>
 		<script type='text/partytown'>
 			;(function (c, l, a, r, i, t, y) {
 				c[a] =
@@ -86,7 +89,11 @@ const { title, description } = Astro.props
 		</script>
 		<ClientRouter />
 	</head>
-	<body>
-		<slot />
+	<body class='flex h-full flex-col'>
+		<Header />
+		<main class='flex-1'>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
