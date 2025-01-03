@@ -1,23 +1,17 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Header from '@/core/components/Header.astro'
-import Footer from '@/core/components/Footer.astro'
 import Hero from '@/core/pages/landing-page/Hero.astro'
 import CComponents from '@/core/pages/landing-page/CComponents.astro'
 import SupportTech from '@/core/pages/landing-page/SupportTech.astro'
-import IconsPage from '@/modules/core/pages/landing-page/IconsPage.astro'
+import IconsPage from '@/core/pages/landing-page/IconsPage.astro'
 ---
 
 <Layout
 	title='Dune UI - A collection of attractive Tailwind CSS components'
 	description='Build sites that sell well'
 >
-	<Header />
-	<main>
-		<Hero />
-		<SupportTech />
-		<CComponents />
-		<IconsPage />
-	</main>
-	<Footer />
+	<Hero />
+	<SupportTech />
+	<CComponents />
+	<IconsPage />
 </Layout>
