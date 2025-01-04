@@ -1,0 +1,86 @@
+---
+import Arrow from '@/core/design-system/Icons/Arrow.astro'
+---
+
+<section
+	class='grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 lg:px-8 pt-6 md:pt-32'
+>
+	<div class='image-container'>
+		<img
+			src='/icons.png'
+			alt="Preview of the icons, it's just a preview, it's not the real icons"
+			loading='lazy'
+			decoding='async'
+		/>
+	</div>
+	<div>
+		<a
+			href='http://neoicons.duneui.com'
+			target='_blank'
+			rel='noopener noreferrer'
+		>
+			<div class='group relative overflow-hidden transition-all duration-300'>
+				<h3
+					class='w-full font-GilroyBold text-2xl font-bold text-black transition-colors md:text-5xl pb-10 inline-flex items-center'
+				>
+					Dune<span class='text-[#93603e]'>UI</span> &nbsp;SVG Icons &nbsp;
+					<Arrow />
+				</h3>
+			</div>
+		</a>
+		<div class='prose-sm'>
+			<p class='text-lg font-GilroyRegular'>
+				<a
+					href='http://neoicons.duneui.com'
+					target='_blank'
+					rel='noopener noreferrer'
+					class='font-bold font-GilroyBold underline text-[#93603e]'>Dune UI</a
+				> Icons offers a vast collection of over 300 high-quality SVG icons designed
+				to integrate seamlessly with Tailwind CSS & Figma.
+			</p>
+			<p class='font-GilroyRegular text-lg'>
+				With styles available in both solid and outline, these icons are fully
+				customizable. Adjust their size, color, and stroke width effortlessly
+				using Tailwind utilities or our intuitive configurator tool.
+			</p>
+			<p class='font-GilroyRegular text-lg'>
+				For Figma users, importing the icons is quick and easy through our
+				dedicated community file, making them perfect for both design and
+				development workflows.
+			</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.image-container {
+		width: 100%;
+		height: 0;
+		padding-bottom: 72.17%;
+		/* (817 / 1132) * 100% */
+		position: relative;
+		overflow: hidden;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	@media (max-width: 768px) {
+		.image-container {
+			display: none;
+			/* (817 / 1132) * 75% - ajusta para pantallas medianas */
+		}
+	}
+
+	/* @media (min-width: 1024px) {
+		.image-container {
+			/* (817 / 1132) * 50% - ajusta para pantallas grandes
+		}
+	} */
+</style>
