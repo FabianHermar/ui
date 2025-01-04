@@ -33,6 +33,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "1.49.1",
+		"@tailwindcss/typography": "^0.5.15",
 		"@types/react-syntax-highlighter": "15.5.13",
 		"@typescript-eslint/eslint-plugin": "8.19.0",
 		"@typescript-eslint/parser": "8.19.0",
