@@ -6,7 +6,7 @@ import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import CheckIcon from '@/core/design-system/Icons/CheckIcon'
 import CopyIcon from '@/core/design-system/Icons/CopyIcon'
 
-export default function ResponsiveTabsHeader() {
+export default function Accordion1() {
 	const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview')
 	const [copy, setCopy] = useState(false)
 
