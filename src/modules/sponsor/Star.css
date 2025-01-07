@@ -1,7 +1,7 @@
 .link-star {
   position: relative;
   padding: 8px 20px;
-  background: #04b6e7;
+  background: #93603e;
   font-size: 16px;
   color: #fff;
   border-radius: 12px;
@@ -145,5 +145,5 @@
 }
 
 .fil0 {
-  @apply fill-darker dark:fill-[#fffdef]
+  @apply fill-black dark:fill-[#fffdef]
 }
