@@ -13,41 +13,44 @@ import Arrow from '@/core/design-system/Icons/Arrow.astro'
 			decoding='async'
 		/>
 	</div>
-	<div>
-		<a
-			href='http://neoicons.duneui.com'
-			target='_blank'
-			rel='noopener noreferrer'
+	<div class='max-w-2xl'>
+		<h2
+			class='text-base lg:text-lg pl-1 leading-7 text-transparent bg-clip-text bg-gradient-to-r from-[#93603e] via-[#c18156] to-[#cea472] font-GilroySemibold'
 		>
-			<div class='group relative overflow-hidden transition-all duration-300'>
-				<h3
-					class='w-full font-GilroyBold text-2xl font-bold text-black transition-colors md:text-5xl pb-10 inline-flex items-center'
-				>
-					Dune<span class='text-[#93603e]'>UI</span> &nbsp;SVG Icons &nbsp;
-					<Arrow />
-				</h3>
+			SVG Icons
+		</h2>
+		<p
+			class='mt-4 text-2xl lg:text-5xl tracking-tight text-slate-900 dark:text-white font-GilroyBold'
+		>
+			Dune UI Icons, a collection of over 300 high-quality SVG icons.
+		</p>
+		<div class='max-w-xl pt-6'>
+			<div class='prose-sm'>
+				<p class='text-base lg:text-lg font-GilroyRegular'>
+					Dune UI Icons offers a vast collection of over 300 high-quality SVG
+					icons designed to integrate seamlessly with Tailwind CSS & Figma.
+				</p>
+				<p class='font-GilroyRegular text-base lg:text-lg'>
+					With styles available in both solid and outline, these icons are fully
+					customizable. Adjust their size, color, and stroke width effortlessly
+					using Tailwind utilities or our intuitive configurator tool.
+				</p>
+				<!-- <p class='font-GilroyRegular text-base lg:text-lg'>
+					For Figma users, importing the icons is quick and easy through our
+					dedicated community file, making them perfect for both design and
+					development workflows.
+				</p> -->
 			</div>
-		</a>
-		<div class='prose-sm'>
-			<p class='text-lg font-GilroyRegular'>
-				<a
-					href='http://neoicons.duneui.com'
-					target='_blank'
-					rel='noopener noreferrer'
-					class='font-bold font-GilroyBold underline text-[#93603e]'>Dune UI</a
-				> Icons offers a vast collection of over 300 high-quality SVG icons designed
-				to integrate seamlessly with Tailwind CSS & Figma.
-			</p>
-			<p class='font-GilroyRegular text-lg'>
-				With styles available in both solid and outline, these icons are fully
-				customizable. Adjust their size, color, and stroke width effortlessly
-				using Tailwind utilities or our intuitive configurator tool.
-			</p>
-			<p class='font-GilroyRegular text-lg'>
-				For Figma users, importing the icons is quick and easy through our
-				dedicated community file, making them perfect for both design and
-				development workflows.
-			</p>
+		</div>
+		<div class='mt-6'>
+			<a
+				class='text-sm lg:text-base text-transparent bg-clip-text bg-gradient-to-r from-[#93603e] via-[#c18156] to-[#cea472] font-GilroySemibold hover:text-[#cea472] transition-colors'
+				href='https://neoicons.duneui.com'
+				target='_blank'
+				rel='noopener noreferrer'
+				aria-label="Browse Dune UI's SVG Icons"
+				>Browse SVG Icon Library <span aria-hidden='true'>→</span>
+			</a>
 		</div>
 	</div>
 </section>
